@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8" />
+    <link href ="./assets/css/style.css" rel="stylesheet" type="text/css">
+    <title>View5</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Required CDN's -->
+    <link rel="stylesheet"
+          href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.21/jquery.zoom.js">
+
+    </script>
+  
+    <style>
+        body {
+            margin: 0px;
+        }
+        h1 {
+            color: green;
+        }
+        .container {
+            display: block;
+            padding: 0px;
+        }
+          
+        .contain {
+            position: fixed;
+            right: 10%;
+            top: 5%;
+            width: 500px;
+            height: 520px;
+            z-index: 1;
+        }
+          .mater{
+            margin-top: 10px;
+            font-size:14px
+          }
+        .magnifyimg {
+            width: 350px;
+            height: 350px;
+            border-radius: 5px;
+            margin: 5%;
+        }
+        .checked{
+  color: orange;
+}
+    </style>
+</head>
+  
+<body onload="firstimg('./assets/images/im5.jpg')">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./assets/images/ilogo.jpg" alt="Logo" style="width:70px;" class="rounded-pill">Organic Farming</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown"  >
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html" data-bs-toggle="tooltip" title="Home">
+                            <i style="font-size:18px" class="fa">&#xf015;</i>Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="categories.html" data-bs-toggle="tooltip" title="Categories"><i style="font-size:18px" class="fa" >&#xf1ad;</i>Categories</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cart.html" data-bs-toggle="tooltip" title="Cart">
+                        <i style="font-size:18px" class="fa">&#xf07a;</i>cart</a>
+                    </li>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-toggle="tooltip" title="Account"><i style="font-size:18px" class="fa">&#xf234;</i>
+                            Account
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="login.html">Create an account</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="login.html">Signin</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="signinhtml">Help Center</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <div id="the-basics" style="justify-content:end;">
+                            <input class="typeahead m-2"   data-toggle="tooltip" data-placement="bottom" title="Search" type="text" placeholder="Search">
+                        </div>
+                    </form>
+                </div>
+        </nav>
+    <div clas ="container">
+    </div>
+      <div style="background-color: ; padding: 10px; padding-bottom: 10px;"><h4>Organic Forming ..Good in Nature</h4></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="parent" style="margin-bottom: 10px;">
+                    <img src=
+        "./assets/images/maf.jpg " class="rounded magnifyimg ">
+                </div>
+          <div> 
+            <img src="./assets/images/im5.jpg" id="tap" alt=""height="150px" width="150px" onclick="firstimg('./assets/images/im5.jpg','#tap')">
+            <img src="./assets/images/i2.jpg" id="tap1" alt="" height="150px" width="150px" onclick="firstimg('./assets/images/i2.jpg','#tap1')">
+            <img src="./assets/images/img2.jpg" id="tap2" alt="" height="150px" width="150px" onclick="firstimg('./assets/images/img2.jpg' ,'#tap2')">
+          </div>
+                <span class="contain">
+               
+            </span>
+            </div>
+             <div class="col-sm-6">
+                <h2>About Organic Soil Erosion </h2>
+                <p>
+    Organic farming also known as ecological farming or biological farming,is an agricultural system that uses fertilizers of organic origin such as compost manure, green manure, and bone meal and places emphasis on techniques such as crop rotation and companion planting. It originated early in the 20th century in reaction to rapidly changing farming practices. Certified organic agriculture accounts for 70 million hectares (170 million acres) globally, with over half of that total in Australia.Organic farming continues to be developed by various organizations today. Biological pest control, mixed cropping and the fostering of insect predators are encouraged. Organic standards are designed to allow the use of naturally-occurring substances while prohibiting or strictly limiting synthetic substances.[7] For instance, naturally-occurring pesticides such as pyrethrin are permitted, while synthetic fertilizers and pesticides are generally prohibited.
+                </p>
+                <div class="container-fluid">
+                  <div class="row"  >
+                <div class="col-sm-3">
+                <img src="./assets/images/c11.jpg" style="width: 100px; height: 100px;"><br><br>
+               </div>
+                <div class="col-sm-9">
+                <h4 style="text-primary"><b>Buy 2 more add extra discount</b></h4> 
+                <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" title="tap">Go on with Cards</a>
+                
+               </div>
+               </div>
+             </div>
+             <div class="container-fluid">
+                  <div class="row"  >
+                <div class="col-sm-3">
+                <img src="./assets/images/c12.jpg" style="width: 100px; height: 100px;"><br> 
+               </div>
+                <div class="col-sm-9">
+                <h4><b>Buy 2 more add extra discount</b></h4> 
+               <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" title="tap">Go on with Cards</a>
+                
+               </div>
+               </div>
+             </div>
+            </div>
+           
+        
+    </div>
+             
+        
+    </div>
+    </div>
+    
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-bottom" >
+            <div class="container-fluid" style="justify-content: center;" >
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active">All copy rights reserved @ 2022</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Crop Protection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Agri Forum</a>    
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Soil Testing & Labaratories</a>   
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Crop Insurance</a>    
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Fertilizer Calculator</a>   
+                    </li>
+                </ul>
+
+            </div>
+            
+        </nav>
+    <script>
+        // $(document).ready(function() {
+  
+        //     $('.parent').css('width', $('.magnifyimg').width());
+  
+        //     $('.magnifyimg')
+        //         .parent()
+        //         .zoom({
+        //             magnify: 4,
+        //             target: $('.contain').get(0)
+        //         });
+        // });
+
+        function firstimg(url,id){
+            // console.log("sdfg",url)
+            $('.magnifyimg').removeAttr('src')
+            $('.magnifyimg').attr('src',url)
+            $("#tap").css("border","none");
+            $("#tap1").css("border","none");
+            $("#tap2").css("border","none");
+            $(id).css("border","1px solid green");
+            $('.parent').css('width', $('.magnifyimg').width());
+            console.log($('.contain').get(0))
+            $('.magnifyimg')
+                .parent()
+                .zoom({
+                magnify: 4,
+                target: $('.contain').get(0)
+            });       
+            
+        }
+    </script>
+</body>
+  
+</html>           

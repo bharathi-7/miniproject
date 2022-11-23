@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MiniProject</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.2/jquery.typeahead.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <link href ="./assets/css/style.css" rel="stylesheet" type="text/css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+        <!-- Typehead script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
+        <script>
+            var substringMatcher = function(strs) {
+              console.log('strs', strs);
+              return function findMatches(q, cb) {
+                console.log('q', q);
+                var matches, substringRegex;
+            
+                // an array that will be populated with substring matches
+                matches = [];
+                console.log('matches', matches);
+            
+                // regex used to determine if a string contains the substring `q`
+                substrRegex = new RegExp(q, 'i');
+            
+                // iterate through the pool of strings and for any string that
+                // contains the substring `q`, add it to the `matches` array
+                $.each(strs, function(i, str) {
+                  if (substrRegex.test(str)) {
+                    matches.push(str);
+                  }
+                });
+                
+                console.log('matches', matches);
+                cb(matches);
+              };
+            };
+            
+             var states = ['Appliances', 'Artificial', 'Algrowns', 'Andorra', '  Adoption lands','Azerbaijan', '  Biodiversity', 'Biochemicals', 'Benzin ', 'Bhetnol ', '  Cambodia','Consumers', '  Containers', '  Comoros', 'Denmark', '  Dominican Republic', '  Equatorial Guinea', 'Ecoterms','  Equators ', ' Ecofriendly', 'Financial', 'Formers', ' Globe',   '  Geothermal', 'Geometry measures', 'Geography', ' Gron-foods', ' Hormones',' Heavy metals', '  Incredible seeds', ' India organic', ' Indore seeds', ' Iran','Holy See', 'Jamaica',  ' Juices', '  Kiribati', ' Kuaawat', '  Kyrgyzstan', '  Laos', '  Luxembourg','  Malaysia', 'Maldives',' Mali', 'Marshall Islands', '  Mauritania','Mauritius','Mexico','Micronesia','Organic','Inorganic','pesticites','proteins','residues'];
+            $(document).ready(function(){
+                $('#the-basics .typeahead').typeahead({
+              hint: true,
+              highlight: true,
+              minLength: 1
+            },
+            {
+              name: 'states',
+              source: substringMatcher(states)
+            
+            });
+            
+            })
+              
+        </script>
+       
+    </head>
+    <body>
+        <!-- Navbar Starting -->
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./assets/images/ilogo.jpg" alt="Logo" style="width:100px;" class="rounded-pill">Organic Farming</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown"  >
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html" data-bs-toggle="tooltip" title="Home">
+                            <i style="font-size:18px" class="fa">&#xf015;</i>Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="categories.html" data-bs-toggle="tooltip" title="Categories"><i style="font-size:18px" class="fa" >&#xf1ad;</i>Categories</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cart.html" data-bs-toggle="tooltip" title="Cart">
+                        <i style="font-size:18px" class="fa">&#xf07a;</i>cart</a>
+                    </li>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-toggle="tooltip" title="Account"><i style="font-size:18px" class="fa">&#xf234;</i>
+                            Account
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="login.html">Create an account</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="login.html">Signin</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="signinhtml">Help Center</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <div id="the-basics" style="justify-content:end;">
+                            <input class="typeahead m-2"   data-toggle="tooltip" data-placement="bottom" title="Search" type="text" placeholder="Search">
+                        </div>
+                    </form>
+                </div>
+        </nav>
+        <!-- Carousels starting -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel" style="width: auto;">
+        <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="./assets/images/img1.jpg" alt="webdesign" class="d-block w-100" height="600vh">
+        </div>
+        <div class="carousel-item active">
+        <img src="./assets/images/img2.jpg" alt="ApplicationDevolopment" class="d-block w-100" height="600vh">
+        </div>
+        <div class="carousel-item ">
+        <img src="./assets/images/img3.jpg" alt="Web" class="d-block w-100"  height="600vh">
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </button>
+        </div>
+        </div>
+        <!-- Swipers Starting -->
+        <div class="text-center">
+            <h3> Organic Farming in India</h3>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper" style="margin-bottom: 50px;">
+                <div class="swiper-slide" >
+                    <div class="card" style="width: 20rem;">
+                        <img src="./assets/images/im1.jpg"alt="..."class="card-img-top" width="100%" height="300vh">
+                        <div class="card-body">
+                            <p class="card-text">Organic farming is agriculture that makes healthy food, healthy soils, healthy plants, and healthy environments a priority</p>
+                             
+                            <a href="./view1.html" class="btn btn-primary" data-bs-toggle="tooltip" title="tap">view more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card" style="width: 20rem;">
+                        <img src="./assets/images/i2.jpg"alt="..."class="card-img-top" width="100%" height="300vh">
+                        <div class="card-body">
+                            <p class="card-text">Organic farming two types; Pure Organic  and Integrated Organic. Pure – This involves avoiding all unnatural chemicals.</p>
+                           
+                            <a href="./view2.html" class="btn btn-primary" data-bs-toggle="tooltip" title="tap">view more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card" style="width: 20rem;">
+                        <img src="./assets/images/i3.jpg"alt="..."class="card-img-top" width="100%" height="300vh">
+                        <div class="card-body">
+                            <p class="card-text">Organic agricultural methods internationally International Federation of Organic Agriculture Movements (IFOAM) </p>
+                           
+                            <a href="./view3.html" class="btn btn-primary" data-bs-toggle="tooltip" title="tap">view more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card" style="width: 20rem;">
+                        <img src="./assets/images/im2.jpg"alt="..."class="card-img-top" width="100%" height="300vh">
+                        <div class="card-body">
+                            <p class="card-text">Organic farming can be beneficial on biodiversity and environmental protection at local level in organic forming</p>
+                            
+                            <a href="./view4.html" class="btn btn-primary" data-bs-toggle="tooltip" title="tap">view more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card" style="width: 20rem;">
+                        <img src="./assets/images/im5.jpg"alt="..."class="card-img-top" width="100%" height="300vh">
+                        <div class="card-body">
+                            <p class="card-text">A city that never sleeps, a land with a spirit of gold and residents with a never say die attitude  millions world over</p>
+                            
+                            <a href="./view5.html" class="btn btn-primary" data-bs-toggle="tooltip" title="tap">view more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card" style="width: 20rem;">
+                        <img src="./assets/images/im6.jpg"alt="..."class="card-img-top" width="100%" height="300vh">
+                        <div class="card-body">
+                            <p class="card-text">'Organic farming is agriculture that makes healthy food, healthy soils, healthy plants, and healthy environments.'</p>
+                            
+                            <a href="./view6.html" class="btn btn-primary" data-bs-toggle="tooltip" title="tap">view more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class ="container w-100 h-40 text-center">
+          <div class="py-2">
+            <div class="px-8"> 
+            <h1>Organic Trades</h1>
+            <div class ="row no-gutters gallerys">
+              <div class= "col-lg-3 col-md-3 col-sm-6 col-12">
+                <a href="./assets/images/image1.png" target ="_blank"><img src="./assets/images/image1.png" class ="img-fluid"></a>
+              </div>
+               <div class= "col-lg-3 col-md-3 col-sm-6 col-12">
+                <a href="./assets/images/image2.jpg" target ="_blank"><img src="./assets/images/image2.jpg" class ="img-fluid"></a>
+              </div>
+              <div class= "col-lg-3 col-md-3 col-sm-6 col-12">
+                <a href="./assets/images/image3.jpg" target ="_blank"><img src="./assets/images/image3.jpg" class ="img-fluid"></a>
+              </div>
+               <div class= "col-lg-3 col-md-3 col-sm-6 col-12">
+                <a href="./assets/images/image4.png" target ="_blank"><img src="./assets/images/image4.png" class ="img-fluid"></a>
+              </div>
+              </div>
+            </div>
+          </div>
+          </div>
+           <!-- Lightbox Script -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+           <script >
+           $(document).ready(function() {
+           $('.gallerys').magnificPopup({
+                                type:'image',
+                                delegate:'a',
+                                gallery:{enabled:true}});
+                                   
+                        });
+           </script>
+     <h3 style="text-align: center;"><b>Feedback Form</b></h3>
+     <div class ="container" style="padding-bottom:50px;margin-bottom: 10px;" > 
+   <form name="myform" method="post"  onsubmit="return " style=" border: 2px solid black;border-radius: 2px; padding-bottom:10px; margin-bottom:20px;">
+      <div class="mb-8 mt-3 p-2 bg-light">
+        <div class="mb-3 mt-3">
+      <label>Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+    </div>
+        <!-- <label><i><b>Name:</b></i></label>
+        <input type="text" class="form-control input"  placeholder="" name="name" id="name"> -->
+        <div>
+          <label  class="form-label" id="star"><i><b>Rating For Us:</b></i></label></div>
+          <div>
+          <i class = "fa fa-star starrate star" aria-hidden = "true" id = "st1"></i>
+         <i class = "fa fa-star starrate star" aria-hidden = "true" id = "st2"></i>
+         <i class = "fa fa-star starrate star" aria-hidden = "true" id = "st3"></i>
+         <i class = "fa fa-star starrate star" aria-hidden = "true" id = "st4"></i>
+         <i class = "fa fa-star starrate star" aria-hidden = "true" id = "st5"></i>
+         </div> 
+         <label for="comment"><i><b>Feedback:</b></i></label>
+          <textarea class="form-control" rows="3" id="comment" name="text"></textarea>
+
+ </div>
+ <button type="button" class="btn btn-primary mb-1" id="submit"data-bs-toggle="modal" data-bs-target="#myModal">
+  Submit
+</button>
+</form>
+</div>
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div id="modal_heading"></div>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+       <div class="modal-body">
+         <div>
+              <i class = "fa fa-star starrate star" aria-hidden = "true" id = "st1"></i>
+               <i class = "fa fa-star starrate star" aria-hidden = "true" id = "st2"></i>
+               <i class = "fa fa-star starrate star" aria-hidden = "true" id = "st3"></i>
+               <i class = "fa fa-star starrate star" aria-hidden = "true" id = "st4"></i>
+               <i class = "fa fa-star starrate star" aria-hidden = "true" id = "st5"></i>
+               </div>
+               <hr>
+  </div>
+  <div>
+   <div id="modal-content">
+   <label for="comment" id="comment"><i><b>Feedback:</b></i></label>
+   </div>
+
+</div>
+
+     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <script >
+    $("#submit").click(function () {
+     var name = $("#name").val();
+      var star = $("#star").val();
+      var comment = $("#comment").val();
+      var str = `rating: ${star}`
+      var str1=`Name:${name}`
+      var str2=`feedback: ${comment}`
+       $("#modal_heading").html(str1);
+       $("#modal_body").html(str);
+       $("#modal_content").html(str2);
+    });
+  </script>
+
+
+        <!-- Bottom navbar Starting -->
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-bottom" >
+            <div class="container-fluid" style="justify-content: center;" >
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active">All copy rights reserved @ 2022</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Crop Protection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Agri Forum</a>    
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Soil Testing & Labaratories</a>   
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Crop Insurance</a>    
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Fertilizer Calculator</a>   
+                    </li>
+                </ul>
+
+            </div>
+            
+        </nav>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+               breakpoints: {
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 30,
+                },
+              }
+            });
+        </script>
+        <script>
+        $(document).ready(function() {
+          $("#st1").click(function() {
+              $(".fa-star").css("color", "black");
+              $("#st1").css("color", "orange");
+
+          });
+          $("#st2").click(function() {
+              $(".fa-star").css("color", "black");
+              $("#st1, #st2").css("color", "orange");
+
+          });
+          $("#st3").click(function() {
+              $(".fa-star").css("color", "black")
+              $("#st1, #st2, #st3").css("color", "orange");
+
+          });
+          $("#st4").click(function() {
+              $(".fa-star").css("color", "black");
+              $("#st1, #st2, #st3, #st4").css("color", "orange");
+
+          });
+          $("#st5").click(function() {
+              $(".fa-star").css("color", "black");
+              $("#st1, #st2, #st3, #st4, #st5").css("color", "orange");
+
+          });
+        });
+    </script>
+
+</html>

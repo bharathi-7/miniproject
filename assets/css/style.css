@@ -1,0 +1,141 @@
+
+/* Tooltip Styling          */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/*Typehead Styling */
+    .serach-bar {
+padding-top: 15px;
+    border: 1px solid #EAEAEA;
+    border-width: 0 0 1px 0;
+      
+    
+    max-width: 224px;
+}
+.tt-hint {
+    color: yellow;
+}
+.tt-menu {
+    width: 190px;
+    
+    background-color: white;
+   
+}
+.tt-suggestion {
+    padding: 3px 20px;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+}
+.tt-suggestion:hover {
+    color:white;
+    background-color: blue;
+}
+
+.socialicons {
+padding-top: 15px;
+border-right: 1px solid #EAEAEA;
+    text-align: right;
+  padding-right: 20px;
+}
+.socialicons a
+{
+color: #222;
+    font-size: 20px;
+    font-weight: 400;
+    padding-right: 10px;
+}
+.socialicons1 {
+text-align: right;
+}
+.socialicons1 a{
+
+font-size: 14px;
+    font-weight: 400;
+    padding-right: 8px;
+}
+/*sliders Styleing*/
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 80%;
+      height: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 14px;
+      background: #fff;
+      height: calc((80% - 30px) / 2);
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  .gallery{
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: canter;
+    align-items: center;
+    box-sizing:border-box;
+}
+.gallery-image{
+    width: 30%;
+    height: calc(50% - 20px);
+    min-height: 200px;
+    min-width: 300px;
+    margin: 10px;
+    overflow: hidden;
+}
+.image{
+    width: 100px;
+    height: 100px;
+    object-fit:cover;
+}
